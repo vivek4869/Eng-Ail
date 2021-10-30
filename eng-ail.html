@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>www.creativearticles.com</title>
+<link rel="shortcut icon" href="logo.jpeg" type="image/x
+icon">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,900;1,700&display=swap" rel="stylesheet">
+ <style type="text/css">
+ /*Utilities CSS*/
+ 
+ *{
+ margin:0;
+ padding:0;
+ box-sizing:border-box;
+ user-select:none;
+ }
+.FlexAllCenter{
+display:flex;
+justify-content:center;
+align-items:center;
+}
+.GridAllCenter{
+display:grid;
+justify-content:center;
+align-items:center;
+}
+ /*Elements Styling*/
+ body{
+ overflow:scroll;
+ background:#F0F0F0;
+ }
+ .container{
+ background:white;
+ height:auto;
+ max-width:800px;
+ margin:auto;
+ position:relative;
+ overflow:hidden;
+ }
+ .header {
+ position:fixed;
+ top:0;
+ left:0;
+ height:100px;
+ width:100%;
+ background:#000;
+ color:#fff;
+ font-family:times new roman;
+ box-shadow:0 5px 10px #00fff9;
+ z-index:10;
+ }
+ .header h1{
+ font-size:50px;
+ font-weight:800;
+ margin:auto;
+ letter-spacing:1px;
+ }
+ .header img {
+ position:absolute;
+ top:0;
+ left:0;
+ height:70px;
+ width:70px;
+ margin:15px 0 15px 120px;
+ }
+ .content {
+ width:100%;
+ height:auto;
+ background:;
+ margin-top:60px;
+ overflow:hidden;
+ padding:15px;
+ }
+ .content h1{
+ margin:20px 0;
+ }
+ time,address {
+ font-weight:800;
+ font-size:15px;
+ }
+ .content img{
+ height:400px;
+ width:100%;
+ box-shadow:10px 10px 10px #C5C6D0;
+ }
+ p{
+ line-height:60px;
+ margin:20px;
+ font-size:20px;
+ font-family: 'Roboto', sans-serif;
+ }
+ 
+ /* Slideshow container */
+ .slideshow-container {
+ max-width: 1000px;
+ position: relative;
+ margin: auto;
+ }
+ 
+ /* Hide the images by default */
+ .mySlides {
+ display: none;
+ }
+ .mySlides img{
+ border:solid black 0.2rem;
+ border-radius:5px;
+ }
+ 
+ /* Next & previous buttons */
+ .prev, .next {
+ cursor: pointer;
+ position: absolute;
+ top: 50%;
+ width: auto;
+ margin-top: -22px;
+ padding: 16px;
+ color: white;
+ font-weight: bold;
+ font-size: 18px;
+ transition: 0.6s ease;
+ border-radius: 0 3px 3px 0;
+ user-select: none;
+ }
+ 
+ .next {
+ right: 0;
+ border-radius: 3px 0 0 3px;
+ }
+ .prev:hover, .next:hover {
+ background-color: rgba(0,0,0,0.8);
+ }
+ .bullets{
+ margin-top:0;
+ text-align:center;
+ }
+ .dot {
+ cursor: pointer;
+ height: 15px;
+ width: 15px;
+ margin: 0 2px;
+ background-color: #bbb;
+ border-radius: 50%;
+ display: inline-block;
+ transition: background-color 0.6s ease;
+ }
+ .active, .dot:hover {
+ background-color: rgba(0,0,0,0.9);
+ }
+ /* Fading animation*/
+ .fade {
+ animation:fade 1.5s;
+ }
+ @keyframes fade {
+ from {opacity: 0.5}
+ to {opacity: 1}
+ }
+ 
+ 
+ .feedback {
+ display:flex;
+ justify-content:space-around;
+ align-items:center;
+ margin:20px 0;
+ width:100%;
+ height:auto;
+ box-shadow:10px 10px 10px #C5C6D0,
+             0px -10px 10px #C5C6D0;
+ padding:10px 0;
+ font-weight:800;
+ }
+ 
+ .feedback .btn{
+ border:solid black 2px;
+ padding:5px;
+ border-radius:5px;
+ width:50px;
+ text-align:center;
+ background:black;
+ color:white;
+ cursor:pointer;
+ }
+ .feedback .btn:hover,.btn:active{
+ background:white;
+ color:black;
+ transition:0.3s;
+ }
+ .footer {
+ width:100%;
+ height:auto;
+ padding:20px 10px;
+ background:black;
+ color:white;
+ padding:10px 30px;
+ }
+ /*Responsive*/
+ @media(max-width:800px) {
+ .header{
+ height:70px;
+ }
+ .header h1{
+ font-size:25px;
+ position:absolute;
+ right:40px;
+ }
+ .header img{
+ margin-left:10px;
+ height:40px;
+ width:40px;
+ position:absolute;
+ left:20px;
+ }
+ 
+ .content {
+ margin-top:30px;
+ }
+ 
+ .content h1{
+ font-size:20px;
+ text-align:left;
+ }
+ p{
+ font-size:18px;
+ line-height:30px;
+ }
+ .content img{
+ height:200px;
+ }
+ .footer h2 {
+ font-size:12px;
+ }
+ </style>
+ </head>
+ <body>
+       <div class="container" >
+         <div class="header GridAllCenter" >
+            <h1>Creative Articles</h1>
+            <img src="logo.png" >
+         </div>
+        <br><br>
+         <div class="content " >
+          <div class="slideshow-container">
+          <div class="mySlides fade">
+          <img src="2.jpeg" style="width:100%">
+          </div>
+          
+          <div class="mySlides fade">
+          <img src="1.jpeg" style="width:100%">
+          </div>
+          
+          <div class="mySlides fade">
+          <img src="3.jpeg" style="width:100%">
+          </div>
+          
+          <!-- Next and previous buttons -->
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          </div>
+          <!-- The dots/circles -->
+          <div  class="bullets">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+
+          </div>
+          
+        
+        <h1>LAWS ARE NEVER RESPECTED NOR ENFORCED IN INDIA
+        
+        <br><small>
+        <time><i class="far fa-clock"></i>
+        30th Oct 2021</time><br>
+        </i>
+        <address> By Vivek Sharma</address>
+        </h1>
+        
+        <p>
+        India, the biggest democracy in the world, is condemned by all for its people are not at all law abiding. We Indians take every thing for granted and have little habit of following any designed system. For instance, the Indian Constitution says that casteism, untouchability and bonded labour shall be abolished.However, we flourish shamelessly even so many years after the operation of the Constitution.
+        </p>
+       
+       <p>Article 48A of the Indian Constitution, which was added to the Directive Principles of the State Policy by the 42nd Amendment Act, 1976, propounds that the State shall endeavour to protect and improve the environment and to safeguard the forests and wildlife of the country. However, little is done in favour of this.</p>
+ 
+      <img src="4.jpeg" >
+      
+ <p>In fact, a recent report of our Parliament’s Estimates Committee has highlighted the near catastrophic depletion of India's forests over the last four decades. It is said that India is losing its forests at the rate of 3.7 million acres a year. There are many such areas now that are officially designated as forest land, however, in reality are tree less. The actual loss of forests is estimated to be eight times the rate indicated by the government statistics.
+</p>
+
+     <img src="5.jpeg" >
+     
+       <p>
+       It is painful but true that laws are neither respected nor enforced in India. Let us take examples from everyday life. Almost everyone is conversant with the rule of the road. Still there are cases of wrong overtaking, lane jumping, signal jumping, over speeding and road rage.</p>
+ 
+ <img src="7.jpeg" >
+ 
+ <p>Our laws insist on compulsory elementary education up to the age of fourteen. Yet we find many illiterate teenager boys or girls of this age loitering around in lanes or employed in petty jobs in road side restaurants or as domestic servants.</p>
+
+<p> Our Constitution insists on the protection and improvement of the environment. The states have been given the responsibility of protecting forests and wildlife. Forests are being cut and illegal shooting of wildlife goes on.</p>
+
+<img src="6.jpeg" >
+
+<p>Similarly, there are laws regarding abolishing casteism, untouchability and bonded labour. But these remain on paper. In actual life, these are never put into practice.</p>
+ 
+ <p>Hence, it can be concluded that this statement is absolutely correct and expresses the bitter truth of judicial system . Laws are only enacted in India but they are neither respected nor enforced seriously. it seems that laws are enacted only to be violated.</p>
+       </div>
+       
+     <div class="feedback" >
+        <p class="msg" >Was this article helpful?</p>
+        <div class="btn" onclick="msg()">YES</div>
+        <div class="btn" onclick="msg()">NO</div>
+     </div>
+       
+       
+        <div class="footer" >
+        <h2>~Created by Vivek Sharma<br>
+        XI Commerce<br>
+        Roll No.:03<br>
+        Thank You</h2>
+       </div>
+ </body>
+ 
+ <script src="https://kit.fontawesome.com/80a7d6abdc.js" crossorigin="anonymous"></script>
+
+ <script type="text/javascript">
+ function msg(){
+ var msg=document.querySelector('.msg');
+ 
+ msg.innerHTML="Thanks for your feedback";
+ }
+ 
+ var slideIndex = 1;
+      showSlides(slideIndex);
+      
+      // Next/previous controls
+      function plusSlides(n) {
+      showSlides(slideIndex += n);
+      }
+      
+      // Thumbnail image controls
+      function currentSlide(n) {
+      showSlides(slideIndex = n);
+      }
+      
+      function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+      }
+ </script>
+ 
+ </html>
